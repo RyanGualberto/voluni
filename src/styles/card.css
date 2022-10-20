@@ -1,0 +1,13 @@
+.cardContainer {
+  margin-bottom: 30px;
+  background-color: #008d9f;
+  border-radius: 12px;
+  min-width: 360px;
+  color: #fff;
+  min-height: 400px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px;
+}

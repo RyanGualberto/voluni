@@ -1,0 +1,55 @@
+main {
+  padding: 0 15px;
+}
+
+hr {
+  width: 100%;
+  margin: 100px 0;
+  height: 5px;
+  background-color: #008d9f;
+}
+
+.carousel {
+  display: flex;
+  gap: 80px;
+  overflow-x: auto;
+  scrollbar-width: 100px;
+}
+
+.carousel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #008d9f;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #f16738;
+  border-radius: 20px;
+  border: 6px solid #008d9f;
+}
+
+h1 {
+  margin: 45px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.row {
+  margin-top: 45px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row p {
+  width: 40%;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.row.second {
+    flex-direction: row-reverse;
+}
