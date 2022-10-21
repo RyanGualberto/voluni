@@ -20,7 +20,8 @@ export default function Servicos() {
     time: "",
     ong: "",
     userCreater: "",
-    image: "" || imageDefault,
+    image: "",
+    services: "",
     uid: localStorage.getItem("user"),
   });
 
@@ -63,6 +64,16 @@ export default function Servicos() {
   useEffect(() => {
     firebase
       .database()
+      .ref("users")
+      .child(localStorage.getItem("user"))
+      .on("value", (snapshot) => {
+        console.log(snapshot.val().name);
+        setData({ ...data, services: snapshot.val().services });
+        setData({ ...data, userCreater: snapshot.val().name });
+      });
+
+    firebase
+      .database()
       .ref("services")
       .on("value", (snapshot) => {
         const data = snapshot.val();
@@ -79,6 +90,8 @@ export default function Servicos() {
               vacancies: data[key].vacancies,
               date: data[key].date,
               time: data[key].time,
+              ong: data[key].ong,
+              userCreater: data[key].userCreater,
               image: data[key].image,
               uid: data[key].uid,
             };

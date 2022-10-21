@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImageAgendamento from "../assets/images/agendamentoImage.png";
 import Navbar from "../components/navbar";
 import "../styles/agenda.css";
@@ -6,15 +6,34 @@ import CardAgendamento from "../components/cardAgendamento";
 import { eventos } from "../mocks/eventos";
 import seeMoreImage from "../assets/images/imgSeeMore.png";
 import finalImage from "../assets/images/imgFinalAgenda.png";
+import firebase from "../services/firebase";
 
 export default function Agenda() {
+  const [myeventos, setMyEventos] = React.useState([]);
+
+  useEffect(() => {
+    firebase
+      .database()
+      .ref("services")
+      .on("value", (snapshot) => {
+        console.log(snapshot.val());
+        const data = snapshot.val();
+        const serviceList = [];
+        for (let id in data) {
+          serviceList.push({ id, ...data[id] });
+        }
+        setMyEventos(serviceList);
+      });
+  }, []);
+
+  console.log(myeventos);
   return (
     <div className="agenda-container">
       <Navbar />
       <div className="agenda-content">
         <img src={ImageAgendamento} />
         <h1>Agenda</h1>
-        {eventos.map((evento) => (
+        {myeventos.reverse().map((evento) => (
           <CardAgendamento key={evento.id} data={evento} />
         ))}
         <div className="modal-final">

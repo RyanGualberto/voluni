@@ -6,11 +6,11 @@ export default function cardAgendamento({ data }) {
     <>
       <div className="cardAgendamento-container">
         <div className="cardAgendamento">
-          <img src={data.imgUrl} alt="" />
+          <img src={data.image} alt="" />
           <div className="cardAgendamento-content">
-            <div className="title">{data.titleEvent}</div>
-            <div>{data.voluntario}</div>
-            <div>{data.ocupacao}</div>
+            <div className="title">{data.name}</div>
+            <div>{data.userCreater}</div>
+            <div>{data.services}</div>
           </div>
         </div>
         <div className="dscEvent">{data.dscEvent}</div>
