@@ -40,3 +40,32 @@
 a.signout {
   color: #a8a8a8;
 }
+
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+  }
+  .nav img {
+    transform: scale(0.2);
+  }
+  .nav-nav-active {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #008d9f;
+    z-index: 5;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.toggle {
+  z-index: 999;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}

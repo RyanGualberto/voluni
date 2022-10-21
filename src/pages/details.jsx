@@ -8,18 +8,22 @@ export default function Details({ data, closeModal }) {
   const [dataUser, setDataUser] = React.useState({});
   const handleParticipate = () => {
     const keyEvent = data.id;
+    const userId = localStorage.getItem("user");
     firebase
       .database()
       .ref("users")
-      .child(localStorage.getItem("user"))
+      .child(userId)
       .child("myEvents")
       .child(keyEvent)
       .update({
         name: data.name,
         description: data.description,
         vacancies: data.vacancies,
+        services: data.services,
+        userCreater: data.name,
         date: data.date,
         time: data.time,
+        image: data.image,
       })
       .then(() => {
         firebase

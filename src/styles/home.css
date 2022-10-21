@@ -53,3 +53,20 @@ h1 {
 .row.second {
   flex-direction: row-reverse;
 }
+
+@media (max-width: 1024px) {
+  .carousel {
+    flex-direction: column;
+    gap: 0;
+  }
+  .row {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .row p {
+    width: 100%;
+  }
+  .row.second {
+    flex-direction: column;
+  }
+}

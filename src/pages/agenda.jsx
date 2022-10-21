@@ -14,15 +14,14 @@ export default function Agenda() {
   useEffect(() => {
     firebase
       .database()
-      .ref("services")
+      .ref("users")
+      .child(localStorage.getItem("user"))
+      .child("myEvents")
       .on("value", (snapshot) => {
         console.log(snapshot.val());
-        const data = snapshot.val();
-        const serviceList = [];
-        for (let id in data) {
-          serviceList.push({ id, ...data[id] });
-        }
-        setMyEventos(serviceList);
+        Object.keys(snapshot.val()).map((key) => {
+          setMyEventos((myeventos) => [...myeventos, snapshot.val()[key]]);
+        });
       });
   }, []);
 

@@ -16,8 +16,10 @@
   background-color: #fff;
   width: 50%;
   height: 50%;
-  min-height: 500px;
+  margin-left: -50px;
+  min-height: 600px;
   border-radius: 5px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

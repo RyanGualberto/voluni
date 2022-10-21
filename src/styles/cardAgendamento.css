@@ -68,3 +68,13 @@
   color: #333;
   background-color: #71d3d64f;
 }
+
+@media (max-width: 768px) {
+  .cardAgendamento {
+    flex-direction: column;
+  }
+  .cardAgendamento img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
