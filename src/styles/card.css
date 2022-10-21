@@ -1,13 +1,49 @@
 .cardContainer {
   margin-bottom: 30px;
   background-color: #008d9f;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.42);
   border-radius: 12px;
   min-width: 360px;
   color: #fff;
-  min-height: 400px;
+  min-height: 420px;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 10px;
+}
+
+.cardContainer p {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardContainer h1 {
+  margin: 0;
+}
+
+.cardContainer img {
+  max-width: 340px;
+  max-height: 200px;
+}
+
+.cardContainer .link {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+.cardContainer .link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.cardContainer .link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }

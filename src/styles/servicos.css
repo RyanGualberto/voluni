@@ -1,0 +1,349 @@
+.servicos-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  flex: 1;
+}
+
+tr {
+  gap: 2px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #4caf50;
+  flex: 1;
+  color: white;
+}
+
+th.title,
+td.title,
+td.actions,
+th.actions {
+  max-width: 300px;
+}
+
+th.actions {
+  text-align: center;
+}
+
+td.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+td.actions button {
+  width: 50px;
+  height: 50px;
+}
+
+.button.see {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button.edit {
+  background-color: #2196f3;
+  color: white;
+}
+
+.button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-container button {
+  width: 50px;
+  height: 50px;
+}
+
+.add-container label {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+}
+
+.button.add {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  border-color: #f2f2f2;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.653);
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+}
+
+.modal-add-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-add-container .modal-add {
+  width: 500px;
+  height: 100%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-add-container .modal-add .modal-add-header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.modal-add-container .modal-add .modal-add-header h2 {
+  font-size: 20px;
+}
+
+.modal-add-container .modal-add .modal-add-header button {
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+}
+
+.modal-add-container .modal-add .modal-add-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-add-container .modal-add .modal-add-body .modal-add-body-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.modal-add-container .modal-add .modal-add-body .modal-add-body-input label {
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.modal-add-container .modal-add .modal-add-body .modal-add-body-input input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: 0.5px solid #ccc;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.modal-add-container
+  .modal-add
+  .modal-add-body
+  .modal-add-body-input
+  input:focus {
+  outline: none;
+}
+
+.modal-edit-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-edit-container .modal-edit {
+  width: 500px;
+  height: 100%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-edit-container .modal-edit .modal-edit-header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.modal-edit-container .modal-edit .modal-edit-header h2 {
+  font-size: 20px;
+}
+
+.modal-edit-container .modal-edit .modal-edit-header button {
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+}
+
+.modal-edit-container .modal-edit .modal-edit-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-edit-container .modal-edit .modal-edit-body .modal-edit-body-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.modal-edit-container
+  .modal-edit
+  .modal-edit-body
+  .modal-edit-body-input
+  label {
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.modal-edit-container
+  .modal-edit
+  .modal-edit-body
+  .modal-edit-body-input
+  input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: 0.5px solid #ccc;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.modal-edit-container
+  .modal-edit
+  .modal-edit-body
+  .modal-edit-body-input
+  input:focus {
+  outline: none;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.disabled {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modalContent {
+  width: 500px;
+  height: 150px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal .modalContent .modal-header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.modal .modalContent .modal-header h2 {
+  font-size: 20px;
+}
+
+.modal .modalContent .modal-header button {
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+}
+
+.modal .modalContent .modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal .modalContent .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  align-items: center;
+}
+
+.modal .modalContent .modal-footer button {
+  width: 100px;
+  height: 40px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.modal .modalContent .modal-footer button:focus {
+  outline: none;
+}

@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/login.css";
 import ilustration from "../assets/images/ilustration.png";
 import logo from "../assets/images/logo.png";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import firebase from "../services/firebase";
+import { toast, Toaster } from "react-hot-toast";
 
-export default function Home(props) {
+export default function Login() {
+  const [data, setData] = React.useState({
+    email: "",
+    password: "",
+  });
+
+  useEffect(() => {
+    localStorage.getItem("user") && (window.location.href = "/home");
+  }, []);
+  const handleLogin = (data) => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(data.email, data.password)
+      .then((user) => {
+        toast.success(`Login realizado com sucesso, seja bem vindo(a)!!`);
+        localStorage.setItem("user", user.user.uid);
+        window.location.href = "/home";
+      })
+      .catch((error) => {
+        toast.error(`Erro ao realizar login, tente novamente!`);
+        console.log(error);
+      });
+  };
+
   return (
     <div className="login-container">
       <div className="main">
@@ -17,31 +42,36 @@ export default function Home(props) {
           <div className="container">
             <h1>Login</h1>
             <h2>Seja bem vindo</h2>
-            <form action="">
-              <input type="text" placeholder="Nome De Usuário" />
-              <input type="password" placeholder="Senha" />
-              <Link  class="button" >Entrar</Link>
+            <form>
+              <input
+                type="email"
+                value={data.email}
+                onChange={(e) => {
+                  setData({ ...data, email: e.target.value });
+                }}
+                placeholder="Nome De Usuário"
+              />
+              <input
+                onChange={(e) => {
+                  setData({ ...data, password: e.target.value });
+                }}
+                value={data.password}
+                type="password"
+                placeholder="Senha"
+              />
+              <Link
+                onClick={() => handleLogin(data)}
+                type="submit"
+                className="button"
+              >
+                Entrar
+              </Link>
             </form>
             <a href="">Recuperar senha</a>
-            <a href="/assets/pages/Cadastro.html">Ainda não possuo uma conta</a>
+            <Link to="/Cadastro">Ainda não possuo uma conta</Link>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-// Nome
-// cpf
-// dt nasc
-// email
-// senha
-
-// voluntario
-
-// nome
-// hora
-// data
-// cnpj
-// cpf
-// ocupacao

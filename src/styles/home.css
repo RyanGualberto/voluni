@@ -51,5 +51,5 @@ h1 {
 }
 
 .row.second {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }

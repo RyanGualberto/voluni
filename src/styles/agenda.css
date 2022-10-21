@@ -1,0 +1,71 @@
+.agenda-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.agenda-container .agenda-content {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.agenda-container hr {
+  width: 70%;
+  height: 1px;
+}
+
+.modal-final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-final div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #71d3d64f;
+  max-width: 1000px;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: 10px 0;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.modal-final .button {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 600;
+  background-color: #008d9f;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.modal-final .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.modal-final .dsc {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+}

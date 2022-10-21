@@ -5,10 +5,10 @@ const eventos = [
     id: 1,
     titleEvent: "lorem",
     imgUrl: image,
-    imgUrl: image,
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
   },
   {
     id: 2,
@@ -17,6 +17,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 3,
@@ -25,6 +27,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 4,
@@ -33,6 +37,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 5,
@@ -41,6 +47,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 6,
@@ -49,6 +57,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 7,
@@ -57,6 +67,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 8,
@@ -65,6 +77,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 9,
@@ -73,6 +87,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 10,
@@ -81,6 +97,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
   {
     id: 11,
@@ -89,6 +107,8 @@ const eventos = [
     dscEvent: "lorem ipsum dolor",
     qtVagas: 150,
     voluntario: "ryan gualberto",
+    ocupacao: "desenvolvedor",
+
   },
 ];
 
