@@ -23,8 +23,6 @@ export default function Home() {
             date: data[key].date,
             time: data[key].time,
             image: data[key].image,
-            ong: data[key].ong,
-            userCreater: data[key].userCreater,
             uid: data[key].uid,
           };
         });
@@ -33,6 +31,7 @@ export default function Home() {
       });
   }, []);
 
+  console.log(events);
   return (
     <>
       <Navbar />
